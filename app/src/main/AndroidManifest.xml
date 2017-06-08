@@ -3,6 +3,15 @@
     package="com.example.saurabh.moviediary">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+
+    <!--
+         The API key for Google Maps-based APIs.
+    -->
+
 
     <application
         android:allowBackup="true"
@@ -12,7 +21,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".screen.MainActivity">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+        <activity android:name=".mvp.DisplayRestaurant.RestaurantDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
